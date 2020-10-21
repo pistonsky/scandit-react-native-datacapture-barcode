@@ -37,7 +37,7 @@ import com.scandit.datacapture.reactnative.core.utils.reject
 
 class ScanditDataCaptureBarcodeTrackingModule(
     private val reactContext: ReactApplicationContext,
-    private val barcodeTrackingDeserializer: BarcodeTrackingDeserializer =
+    @get:VisibleForTesting val barcodeTrackingDeserializer: BarcodeTrackingDeserializer =
             BarcodeTrackingDeserializer(),
     eventEmitter: DeviceEventManagerModule.RCTDeviceEventEmitter = LazyEventEmitter(reactContext),
     sessionProvider: (() -> BarcodeTrackingSession?)? = null,

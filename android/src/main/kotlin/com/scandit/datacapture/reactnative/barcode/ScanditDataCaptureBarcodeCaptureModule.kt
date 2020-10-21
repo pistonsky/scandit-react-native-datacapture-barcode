@@ -29,7 +29,7 @@ import com.scandit.datacapture.reactnative.core.utils.LazyEventEmitter
 
 class ScanditDataCaptureBarcodeCaptureModule(
     private val reactContext: ReactApplicationContext,
-    private val barcodeCaptureDeserializer: BarcodeCaptureDeserializer =
+    @get:VisibleForTesting val barcodeCaptureDeserializer: BarcodeCaptureDeserializer =
             BarcodeCaptureDeserializer(),
     eventEmitter: DeviceEventManagerModule.RCTDeviceEventEmitter = LazyEventEmitter(reactContext),
     private val barcodeCaptureListener: RCTBarcodeCaptureListener =
