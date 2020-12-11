@@ -19,16 +19,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BarcodeCaptureSettings = void 0;
 var LocationSelection_1 = require("scandit-react-native-datacapture-core/js/LocationSelection");
 var Serializeable_1 = require("scandit-react-native-datacapture-core/js/private/Serializeable");
-var BarcodeDefaults_1 = require("./private/BarcodeDefaults");
 var BarcodeCaptureDefaults_1 = require("./private/BarcodeCaptureDefaults");
+var BarcodeDefaults_1 = require("./private/BarcodeDefaults");
 var BarcodeCaptureSettings = /** @class */ (function (_super) {
     __extends(BarcodeCaptureSettings, _super);
     function BarcodeCaptureSettings() {
         var _this = _super.call(this) || this;
         _this.codeDuplicateFilter = BarcodeCaptureDefaults_1.BarcodeCaptureDefaults.BarcodeCaptureSettings.codeDuplicatedFilter;
         _this.locationSelection = null;
+        _this.enabledCompositeTypes = [];
         _this.properties = {};
         _this.symbologies = {};
         return _this;
@@ -39,7 +41,17 @@ var BarcodeCaptureSettings = /** @class */ (function (_super) {
             return Object.keys(this.symbologies)
                 .filter(function (symbology) { return _this.symbologies[symbology].isEnabled; });
         },
-        enumerable: true,
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(BarcodeCaptureSettings.prototype, "compositeTypeDescriptions", {
+        get: function () {
+            return BarcodeDefaults_1.BarcodeDefaults.CompositeTypeDescriptions.reduce(function (descriptions, description) {
+                descriptions[description.types[0]] = description;
+                return descriptions;
+            }, {});
+        },
+        enumerable: false,
         configurable: true
     });
     BarcodeCaptureSettings.prototype.settingsForSymbology = function (symbology) {
@@ -62,6 +74,12 @@ var BarcodeCaptureSettings = /** @class */ (function (_super) {
     };
     BarcodeCaptureSettings.prototype.enableSymbology = function (symbology, enabled) {
         this.settingsForSymbology(symbology).isEnabled = enabled;
+    };
+    BarcodeCaptureSettings.prototype.enableSymbologiesForCompositeTypes = function (compositeTypes) {
+        var _this = this;
+        compositeTypes.forEach(function (compositeType) {
+            _this.enableSymbologies(_this.compositeTypeDescriptions[compositeType].symbologies);
+        });
     };
     __decorate([
         Serializeable_1.serializationDefault(LocationSelection_1.NoneLocationSelection)

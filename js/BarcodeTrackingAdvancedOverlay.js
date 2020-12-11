@@ -19,6 +19,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BarcodeTrackingAdvancedOverlay = void 0;
 var Serializeable_1 = require("scandit-react-native-datacapture-core/js/private/Serializeable");
 var BarcodeTrackingAdvancedOverlayProxy_1 = require("./native/BarcodeTrackingAdvancedOverlayProxy");
 var BarcodeTrackingAdvancedOverlay = /** @class */ (function (_super) {
@@ -43,7 +44,7 @@ var BarcodeTrackingAdvancedOverlay = /** @class */ (function (_super) {
             }
             this._view = newView;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     BarcodeTrackingAdvancedOverlay.withBarcodeTrackingForView = function (barcodeTracking, view) {

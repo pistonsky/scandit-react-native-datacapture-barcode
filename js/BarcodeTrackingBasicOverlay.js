@@ -19,6 +19,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BarcodeTrackingBasicOverlay = void 0;
 var Common_1 = require("scandit-react-native-datacapture-core/js/Common");
 var Serializeable_1 = require("scandit-react-native-datacapture-core/js/private/Serializeable");
 var BarcodeTrackingBasicOverlayProxy_1 = require("./native/BarcodeTrackingBasicOverlayProxy");
@@ -47,14 +48,14 @@ var BarcodeTrackingBasicOverlay = /** @class */ (function (_super) {
             }
             this._view = newView;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeTrackingBasicOverlay, "defaultBrush", {
         get: function () {
             return new Common_1.Brush(BarcodeTrackingDefaults_1.BarcodeTrackingDefaults.BarcodeTrackingBasicOverlay.DefaultBrush.fillColor, BarcodeTrackingDefaults_1.BarcodeTrackingDefaults.BarcodeTrackingBasicOverlay.DefaultBrush.strokeColor, BarcodeTrackingDefaults_1.BarcodeTrackingDefaults.BarcodeTrackingBasicOverlay.DefaultBrush.strokeWidth);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeTrackingBasicOverlay.prototype, "brush", {
@@ -65,7 +66,7 @@ var BarcodeTrackingBasicOverlay = /** @class */ (function (_super) {
             this._brush = newBrush;
             this.barcodeTracking.didChange();
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeTrackingBasicOverlay.prototype, "shouldShowScanAreaGuides", {
@@ -76,7 +77,7 @@ var BarcodeTrackingBasicOverlay = /** @class */ (function (_super) {
             this._shouldShowScanAreaGuides = shouldShow;
             this.barcodeTracking.didChange();
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     BarcodeTrackingBasicOverlay.withBarcodeTracking = function (barcodeTracking) {

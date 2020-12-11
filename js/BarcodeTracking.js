@@ -19,6 +19,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BarcodeTracking = void 0;
 var Serializeable_1 = require("scandit-react-native-datacapture-core/js/private/Serializeable");
 var BarcodeTrackingListenerProxy_1 = require("./native/BarcodeTrackingListenerProxy");
 var BarcodeTrackingDefaults_1 = require("./private/BarcodeTrackingDefaults");
@@ -46,21 +47,21 @@ var BarcodeTracking = /** @class */ (function (_super) {
                 this.didChange();
             }
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeTracking.prototype, "context", {
         get: function () {
             return this._context;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeTracking, "recommendedCameraSettings", {
         get: function () {
             return BarcodeTrackingDefaults_1.BarcodeTrackingDefaults.RecommendedCameraSettings;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeTracking.prototype, "_context", {
@@ -76,7 +77,7 @@ var BarcodeTracking = /** @class */ (function (_super) {
             }
             this.privateContext = newContext;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     BarcodeTracking.forContext = function (context, settings) {

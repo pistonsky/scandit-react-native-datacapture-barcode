@@ -16,6 +16,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BarcodeTrackingAdvancedOverlayView = void 0;
 var react_1 = __importDefault(require("react"));
 var BarcodeTrackingAdvancedOverlayView = /** @class */ (function (_super) {
     __extends(BarcodeTrackingAdvancedOverlayView, _super);
@@ -26,7 +27,7 @@ var BarcodeTrackingAdvancedOverlayView = /** @class */ (function (_super) {
         get: function () {
             return BarcodeTrackingAdvancedOverlayView.moduleName;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     BarcodeTrackingAdvancedOverlayView.moduleName = 'BarcodeTrackingAdvancedOverlayViewComponent';

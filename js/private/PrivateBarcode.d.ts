@@ -6,6 +6,8 @@ export interface BarcodeJSON {
     data: Optional<string>;
     rawData: string;
     addOnData: Optional<string>;
+    compositeData: Optional<string>;
+    compositeRawData: string;
     isGS1DataCarrier: boolean;
     compositeFlag: string;
     isColorInverted: boolean;

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BarcodeCaptureListenerProxy = void 0;
 var react_native_1 = require("react-native");
 var BarcodeCaptureSession_1 = require("../BarcodeCaptureSession");
 // tslint:disable:variable-name

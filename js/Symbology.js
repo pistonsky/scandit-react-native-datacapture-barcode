@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Symbology = void 0;
 var Symbology;
 (function (Symbology) {
     Symbology["EAN13UPCA"] = "ean13Upca";
@@ -29,5 +30,6 @@ var Symbology;
     Symbology["Code32"] = "code32";
     Symbology["Lapa4SC"] = "lapa4sc";
     Symbology["IATATwoOfFive"] = "iata2of5";
+    Symbology["MatrixTwoOfFive"] = "matrix2of5";
 })(Symbology = exports.Symbology || (exports.Symbology = {}));
 //# sourceMappingURL=Symbology.js.map

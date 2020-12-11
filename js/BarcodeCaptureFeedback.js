@@ -13,6 +13,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BarcodeCaptureFeedback = void 0;
 var Serializeable_1 = require("scandit-react-native-datacapture-core/js/private/Serializeable");
 var Feedback_1 = require("scandit-react-native-datacapture-core/js/Feedback");
 var BarcodeCaptureFeedback = /** @class */ (function (_super) {
@@ -26,7 +27,7 @@ var BarcodeCaptureFeedback = /** @class */ (function (_super) {
         get: function () {
             return new BarcodeCaptureFeedback();
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     return BarcodeCaptureFeedback;

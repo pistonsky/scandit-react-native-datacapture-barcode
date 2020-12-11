@@ -1,5 +1,5 @@
 import { Symbology } from '../Symbology';
-import { EncodingRange, SymbologyDescription, SymbologySettings } from '../Symbology+Related';
+import { CompositeType, EncodingRange, SymbologyDescription, SymbologySettings } from '../Symbology+Related';
 export interface SymbologyDescriptionJSON {
     identifier: string;
     readableName: string;
@@ -8,6 +8,10 @@ export interface SymbologyDescriptionJSON {
     activeSymbolCountRange: RangeJSON;
     defaultSymbolCountRange: RangeJSON;
     supportedExtensions: string[];
+}
+export interface CompositeTypeDescription {
+    types: CompositeType[];
+    symbologies: Symbology[];
 }
 export interface PrivateSymbologyDescription {
     defaults: () => {

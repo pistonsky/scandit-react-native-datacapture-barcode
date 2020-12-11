@@ -13,6 +13,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BarcodeTrackingSettings = exports.BarcodeTrackingScenario = void 0;
 var Serializeable_1 = require("scandit-react-native-datacapture-core/js/private/Serializeable");
 var BarcodeDefaults_1 = require("./private/BarcodeDefaults");
 var BarcodeTrackingScenario;
@@ -35,7 +36,7 @@ var BarcodeTrackingSettings = /** @class */ (function (_super) {
             return Object.keys(this.symbologies)
                 .filter(function (symbology) { return _this.symbologies[symbology].isEnabled; });
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     BarcodeTrackingSettings.forScenario = function (scenario) {

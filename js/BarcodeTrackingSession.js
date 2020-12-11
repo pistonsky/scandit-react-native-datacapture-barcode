@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BarcodeTrackingSession = void 0;
 var Barcode_1 = require("./Barcode");
 var BarcodeTrackingSession = /** @class */ (function () {
     function BarcodeTrackingSession() {
@@ -8,35 +9,35 @@ var BarcodeTrackingSession = /** @class */ (function () {
         get: function () {
             return this._addedTrackedBarcodes;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeTrackingSession.prototype, "removedTrackedBarcodes", {
         get: function () {
             return this._removedTrackedBarcodes;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeTrackingSession.prototype, "updatedTrackedBarcodes", {
         get: function () {
             return this._updatedTrackedBarcodes;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeTrackingSession.prototype, "trackedBarcodes", {
         get: function () {
             return this._trackedBarcodes;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeTrackingSession.prototype, "frameSequenceID", {
         get: function () {
             return this._frameSequenceID;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     BarcodeTrackingSession.fromJSON = function (json) {

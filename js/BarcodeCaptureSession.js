@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BarcodeCaptureSession = void 0;
 var Barcode_1 = require("./Barcode");
 var BarcodeCaptureSession = /** @class */ (function () {
     function BarcodeCaptureSession() {
@@ -8,21 +9,21 @@ var BarcodeCaptureSession = /** @class */ (function () {
         get: function () {
             return this._newlyRecognizedBarcodes;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeCaptureSession.prototype, "newlyLocalizedBarcodes", {
         get: function () {
             return this._newlyLocalizedBarcodes;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeCaptureSession.prototype, "frameSequenceID", {
         get: function () {
             return this._frameSequenceID;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     BarcodeCaptureSession.fromJSON = function (json) {

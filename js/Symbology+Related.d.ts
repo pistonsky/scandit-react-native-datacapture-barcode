@@ -35,6 +35,11 @@ export declare class SymbologySettings extends DefaultSerializeable {
     private static fromJSON;
     setExtensionEnabled(extension: string, enabled: boolean): void;
 }
+export declare enum CompositeType {
+    A = "A",
+    B = "B",
+    C = "C"
+}
 export declare enum Checksum {
     Mod10 = "mod10",
     Mod11 = "mod11",

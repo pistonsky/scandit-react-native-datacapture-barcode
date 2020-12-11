@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrackedBarcode = exports.LocalizedOnlyBarcode = exports.Barcode = void 0;
 var Common_1 = require("scandit-react-native-datacapture-core/js/Common");
 var Symbology_Related_1 = require("./Symbology+Related");
 var Barcode = /** @class */ (function () {
@@ -7,57 +8,67 @@ var Barcode = /** @class */ (function () {
     }
     Object.defineProperty(Barcode.prototype, "symbology", {
         get: function () { return this._symbology; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Barcode.prototype, "data", {
         get: function () { return this._data; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Barcode.prototype, "rawData", {
         get: function () { return this._rawData; },
-        enumerable: true,
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Barcode.prototype, "compositeData", {
+        get: function () { return this._compositeData; },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Barcode.prototype, "compositeRawData", {
+        get: function () { return this._compositeRawData; },
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Barcode.prototype, "addOnData", {
         get: function () { return this._addOnData; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Barcode.prototype, "encodingRanges", {
         get: function () { return this._encodingRanges; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Barcode.prototype, "location", {
         get: function () { return this._location; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Barcode.prototype, "isGS1DataCarrier", {
         get: function () { return this._isGS1DataCarrier; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Barcode.prototype, "compositeFlag", {
         get: function () { return this._compositeFlag; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Barcode.prototype, "isColorInverted", {
         get: function () { return this._isColorInverted; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Barcode.prototype, "symbolCount", {
         get: function () { return this._symbolCount; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Barcode.prototype, "frameID", {
         get: function () { return this._frameID; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Barcode.fromJSON = function (json) {
@@ -65,6 +76,8 @@ var Barcode = /** @class */ (function () {
         barcode._symbology = json.symbology;
         barcode._data = json.data;
         barcode._rawData = json.rawData;
+        barcode._compositeData = json.compositeData;
+        barcode._compositeRawData = json.compositeRawData;
         barcode._addOnData = json.addOnData === undefined ? null : json.addOnData;
         barcode._isGS1DataCarrier = json.isGS1DataCarrier;
         barcode._compositeFlag = json.compositeFlag;
@@ -85,14 +98,14 @@ var LocalizedOnlyBarcode = /** @class */ (function () {
         get: function () {
             return this._location;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(LocalizedOnlyBarcode.prototype, "frameID", {
         get: function () {
             return this._frameID;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     LocalizedOnlyBarcode.fromJSON = function (json) {
@@ -109,22 +122,22 @@ var TrackedBarcode = /** @class */ (function () {
     }
     Object.defineProperty(TrackedBarcode.prototype, "barcode", {
         get: function () { return this._barcode; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(TrackedBarcode.prototype, "location", {
         get: function () { return this._location; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(TrackedBarcode.prototype, "identifier", {
         get: function () { return this._identifier; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(TrackedBarcode.prototype, "shouldAnimateFromPreviousToNextState", {
         get: function () { return this._shouldAnimateFromPreviousToNextState; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     TrackedBarcode.fromJSON = function (json) {

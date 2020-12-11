@@ -19,6 +19,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BarcodeCaptureOverlay = void 0;
 var Common_1 = require("scandit-react-native-datacapture-core/js/Common");
 var Serializeable_1 = require("scandit-react-native-datacapture-core/js/private/Serializeable");
 var Viewfinder_1 = require("scandit-react-native-datacapture-core/js/Viewfinder");
@@ -37,7 +38,7 @@ var BarcodeCaptureOverlay = /** @class */ (function (_super) {
         get: function () {
             return new Common_1.Brush(BarcodeCaptureDefaults_1.BarcodeCaptureDefaults.BarcodeCaptureOverlay.DefaultBrush.fillColor, BarcodeCaptureDefaults_1.BarcodeCaptureDefaults.BarcodeCaptureOverlay.DefaultBrush.strokeColor, BarcodeCaptureDefaults_1.BarcodeCaptureDefaults.BarcodeCaptureOverlay.DefaultBrush.strokeWidth);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeCaptureOverlay.prototype, "brush", {
@@ -48,7 +49,7 @@ var BarcodeCaptureOverlay = /** @class */ (function (_super) {
             this._brush = newBrush;
             this.barcodeCapture.didChange();
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeCaptureOverlay.prototype, "viewfinder", {
@@ -59,7 +60,7 @@ var BarcodeCaptureOverlay = /** @class */ (function (_super) {
             this._viewfinder = newViewfinder;
             this.barcodeCapture.didChange();
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BarcodeCaptureOverlay.prototype, "shouldShowScanAreaGuides", {
@@ -70,7 +71,7 @@ var BarcodeCaptureOverlay = /** @class */ (function (_super) {
             this._shouldShowScanAreaGuides = shouldShow;
             this.barcodeCapture.didChange();
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     BarcodeCaptureOverlay.withBarcodeCapture = function (barcodeCapture) {

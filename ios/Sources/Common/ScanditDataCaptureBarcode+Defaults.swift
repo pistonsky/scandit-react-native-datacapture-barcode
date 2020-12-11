@@ -17,11 +17,16 @@ extension ScanditDataCaptureBarcode {
 
     var defaults: [String: Any] {
         return ["SymbologyDescriptions": symbologyDescriptions,
-                "SymbologySettings": symbologySettings]
+                "SymbologySettings": symbologySettings,
+                "CompositeTypeDescriptions": compositeTypeDescriptions ]
     }
 
     var symbologyDescriptions: [String] {
         return SymbologyDescription.all.map {$0.jsonString}
+    }
+
+    var compositeTypeDescriptions: [String] {
+        return CompositeTypeDescription.all.map {$0.jsonString}
     }
 
     var symbologySettings: [String: String] {

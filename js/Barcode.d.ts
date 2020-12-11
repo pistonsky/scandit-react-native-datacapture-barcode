@@ -8,6 +8,10 @@ export declare class Barcode {
     get data(): Optional<string>;
     private _rawData;
     get rawData(): string;
+    private _compositeData;
+    get compositeData(): Optional<string>;
+    private _compositeRawData;
+    get compositeRawData(): string;
     private _addOnData;
     get addOnData(): Optional<string>;
     private _encodingRanges;

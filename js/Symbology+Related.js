@@ -19,6 +19,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Range = exports.CompositeFlag = exports.EncodingRange = exports.Checksum = exports.CompositeType = exports.SymbologySettings = exports.SymbologyDescription = void 0;
 var Serializeable_1 = require("scandit-react-native-datacapture-core/js/private/Serializeable");
 var SymbologyDescription = /** @class */ (function () {
     function SymbologyDescription(symbology) {
@@ -32,47 +33,47 @@ var SymbologyDescription = /** @class */ (function () {
         get: function () {
             return this.defaults().SymbologyDescriptions;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SymbologyDescription.prototype, "identifier", {
         get: function () { return this._identifier; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SymbologyDescription.prototype, "symbology", {
         get: function () { return this.identifier; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SymbologyDescription.prototype, "readableName", {
         get: function () { return this._readableName; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SymbologyDescription.prototype, "isAvailable", {
         get: function () { return this._isAvailable; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SymbologyDescription.prototype, "isColorInvertible", {
         get: function () { return this._isColorInvertible; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SymbologyDescription.prototype, "activeSymbolCountRange", {
         get: function () { return this._activeSymbolCountRange; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SymbologyDescription.prototype, "defaultSymbolCountRange", {
         get: function () { return this._defaultSymbolCountRange; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SymbologyDescription.prototype, "supportedExtensions", {
         get: function () { return this._supportedExtensions; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     SymbologyDescription.fromJSON = function (json) {
@@ -101,14 +102,14 @@ var SymbologySettings = /** @class */ (function (_super) {
         get: function () {
             return this._symbology;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SymbologySettings.prototype, "enabledExtensions", {
         get: function () {
             return this.extensions;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     SymbologySettings.fromJSON = function (json) {
@@ -141,6 +142,12 @@ var SymbologySettings = /** @class */ (function (_super) {
     return SymbologySettings;
 }(Serializeable_1.DefaultSerializeable));
 exports.SymbologySettings = SymbologySettings;
+var CompositeType;
+(function (CompositeType) {
+    CompositeType["A"] = "A";
+    CompositeType["B"] = "B";
+    CompositeType["C"] = "C";
+})(CompositeType = exports.CompositeType || (exports.CompositeType = {}));
 var Checksum;
 (function (Checksum) {
     Checksum["Mod10"] = "mod10";
@@ -157,17 +164,17 @@ var EncodingRange = /** @class */ (function () {
     }
     Object.defineProperty(EncodingRange.prototype, "ianaName", {
         get: function () { return this._ianaName; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(EncodingRange.prototype, "startIndex", {
         get: function () { return this._startIndex; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(EncodingRange.prototype, "endIndex", {
         get: function () { return this._endIndex; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     EncodingRange.fromJSON = function (json) {
@@ -196,28 +203,28 @@ var Range = /** @class */ (function () {
         get: function () {
             return this._minimum;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Range.prototype, "maximum", {
         get: function () {
             return this._maximum;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Range.prototype, "step", {
         get: function () {
             return this._step;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Range.prototype, "isFixed", {
         get: function () {
             return this.minimum === this.maximum || this.step <= 0;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Range.fromJSON = function (json) {
